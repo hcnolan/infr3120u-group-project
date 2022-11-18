@@ -1,0 +1,23 @@
+{
+  "name": "infr3120u-group-project",
+  "version": "1.0.0",
+  "description": "INFR 3120U group project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hcnolan/infr3120u-group-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hcnolan/infr3120u-group-project/issues"
+  },
+  "homepage": "https://github.com/hcnolan/infr3120u-group-project#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "express": "^4.18.2"
+  }
+}
