@@ -15,5 +15,5 @@ Provide the ability to (CRUD)
 # Done
 
 - Decide what the site will be (site will be a car rental)
-- Create design document (done, using prexisting bootstrap theme)
+- Create design document (done, using prexisting bootstrap theme ~ asked prof, said it is fine)
 - Create landing page (done - Rex)
