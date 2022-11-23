@@ -4,15 +4,15 @@
  * Module dependencies.
  */
 
-var app = require('./app');
-var debug = require('debug')('projectone:server');
-var http = require('http');
+let app = require('./app');
+let debug = require('debug')('projectone:server');
+let http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+let port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
