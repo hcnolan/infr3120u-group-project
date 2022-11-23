@@ -8,6 +8,6 @@ let reservationModel = mongoose.Schema({
     carModel: String,
 },
 {
-    collection: "reservations"
+    collection: "Reservations"
 })
 module.exports = mongoose.model('ReservationModel', reservationModel);
