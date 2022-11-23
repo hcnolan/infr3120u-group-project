@@ -15,3 +15,6 @@ let reservationModel = require('../models/reservations')
 
 
 // Delete operation
+
+
+module.exports = router;
