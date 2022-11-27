@@ -1,0 +1,55 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<main>
+    <!-- Main div for all page content -->
+    <div class="container-fluid p-5 mb-1 bg-light rounded-3 py-5">
+        <div class="row">
+            <div class="col-md-offset-10">
+                <!-- Page title and add button -->
+                <h1 class="display-5 fw-bold">Reservations </h1>
+                    <a href="/reservations/add" class="btn btn-dark" role="button">
+                        <i class="fas fa-plus-circle"></i> New Reservation
+                    </a>
+                    <br>
+                    <br>
+
+                
+                <!-- Database table -->
+                <table class="table table-bordered table-striped table-hover table-responsive">
+                    <tr>
+                        <th class="text-center col-3">First Name</th>
+                        <th class="text-center col-3">Last Name</th>
+                        <th class="text-center col-1.5">Date</th>
+                        <th class="text-center col-2">Car Manufacturer</th>
+                        <th class="text-center col-2">Car Model</th>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                    </tr>
+                    <!-- Repeat table row template for each entry in the database -->
+                    <% for(let count=0; count<reservationList.length; count++) { %>
+                        <tr>
+                            <td class="text-center col-3"><%= reservationList[count].firstName %></td>
+                            <td class="text-center col-3"><%= reservationList[count].lastName %></td>
+                            <td class="text-center col-1.5"><%= reservationList[count].date %></td>
+                            <td class="text-center col-2"><%= reservationList[count].carMake %></td>
+                            <td class="text-center col-2"><%= reservationList[count].carModel %></td> 
+                            <td class="text-center col-1">
+                                <a href="/reservations/update/<%= reservationList[count]._id %>"
+                                    class="btn btn-dark"
+                                    <i class="fas fa-pencil-alt"></i>Edit Reservation</a>
+                            </td>
+                            <td class="text-center col-1">
+                                <a href="/reservations/delete/<%= reservationList[count]._id %>"
+                                    class="btn btn-danger"
+                                    <i class="fas fa-trash-alt"></i>Delete Reservation</a> 
+                            </td>
+                        </tr>
+                    <% } %>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer.ejs') %>
