@@ -1,0 +1,75 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<!-- Content for the Update page -->
+    <main>
+    <br>
+    <br>
+    <div class ="container">
+    <h1 class="display-5 fw-bold">Edit the details of your reservation</h1>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <form class="form" method="post">
+
+                    <div class="form-group">
+                    <label for="firstNameTextField"> First Name </label>
+                    <input type="text" class="form-control"
+                    id="firstNameTextField"
+                    placeholder="Enter the First Name"
+                    name="firstName" 
+                    value="<%= reservations.firstName %>"
+                    required>
+                    
+                    <div class="form-group">
+                    <label for="lastNameTextField"> Last Name </label>
+                    <input type="text" class="form-control"
+                    id="lastNameTextField"
+                    placeholder="Enter the Last Name"
+                    name="lastName" 
+                    value="<%= reservations.lastName %>"
+                    required>
+
+                    <div class="form-group">
+                    <label for="DateTextField"> Date </label>
+                    <input type="text" class="form-control"
+                    id="dateTextField"
+                    placeholder="Enter the date"
+                    name="date" 
+                    value="<%= reservations.date %>"
+                    required>
+                    
+                    <div class="form-group">
+                    <label for="carMakeTextField"> Make </label>
+                    <input type="text" class="form-control"
+                    id="carMakeTextField"
+                    placeholder="Enter the Make"
+                    name="carMake"
+                    value="<%= reservations.carMake %>"
+                    required>
+
+                    <div class="form-group">
+                    <label for="carModelTextField"> Model </label>
+                    <input type="text" class="form-control"
+                    id="carModelTextField"
+                    placeholder="Enter the Model"
+                    name="carModel"
+                    value="<%= reservations.carModel %>"
+                    required>
+
+                    <br>
+
+                    <button class="btn-btn-primary" type="submit">
+                        <i class="fas fa-edit"></i>Submit</button>
+
+                    <a href="/reservations" class="btn btn-warning">
+                        <i class="fas fa-undo"></i>Cancel</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    </main>
+
+<%- include('../partials/footer.ejs') %>

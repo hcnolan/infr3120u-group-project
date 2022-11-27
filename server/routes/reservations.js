@@ -50,7 +50,7 @@ router.post('/add', (req, res, next)=> {
 // Get route for displaying Update page
 router.get('/update/:id', (req, res, next)=> {
     let id = req.params.id;
-    Reservations.findById(id,(err, reservationsToUpdate) =>{
+    reservations.findById(id,(err, reservationsToUpdate) =>{
         if (err)
         {
             console.log(err);
@@ -58,7 +58,7 @@ router.get('/update/:id', (req, res, next)=> {
         }
         else 
         {
-            res.render('cars/update', {title: 'Update Reservation', reservations:reservationsToEdit});
+            res.render('cars/update', {title: 'Update Reservation', reservations:reservationsToUpdate});
         }
     });
 });
@@ -66,15 +66,15 @@ router.get('/update/:id', (req, res, next)=> {
 // Post route for displaying the Update page
 router.post('/update/:id', (req, res, next)=> {
     let id = req.params.id;
-    let updateReservations = Reservations({
+    let updateReservations = reservations({
         "_id":id,
-        "First Name":req.body.firstname,
-        "Last Name":req.body.lastname,
-        "Date":req.body.date,
-        "Make":req.body.carMake,
-        "Model":req.body.carModel,
+        "firstName":req.body.firstName,
+        "lastName":req.body.lastName,
+        "date":req.body.date,
+        "carMake":req.body.carMake,
+        "carModel":req.body.carModel,
     });
-    Reservations.updateOne({_id:id}, updateReservations, (err)=>{
+    reservations.updateOne({_id:id}, updateReservations, (err)=>{
         if (err)
         {
             console.log(err);
