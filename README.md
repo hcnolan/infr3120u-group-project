@@ -3,16 +3,13 @@ INFR 3120U Group Project
 
 
 # To Do
+- Create routes (Video Authentication 1 complete)
 
 - customize views to fit our needs
 
-- External Design Document
-
-- Demo Video????
-
 - add warning before deletion of document
 
-# Done
+# Part 1 Done
 
 - Decide what the site will be (site will be a car rental)
 - Create design document (done, using prexisting bootstrap theme [https://startbootstrap.com/theme/new-age] ~ asked prof, said it is fine - Rex)
@@ -23,3 +20,7 @@ INFR 3120U Group Project
 - view list of existing objects
 - edit existing objects
 - delete existing objects
+
+- External Design Document
+
+- Demo Video????
