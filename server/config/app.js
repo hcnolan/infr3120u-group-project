@@ -13,7 +13,7 @@ let app = express();
 
 // create a user model instance
 let userModel = require('../models/user');
-let user = userModel.User;
+let User = userModel.User;
 
 
 // MongoDB Configuration
@@ -28,28 +28,30 @@ mongDB.once('open', ()=> {
   console.log('Connected to MongoDB.');
 })
 
-
-
-
-// serialize and deserialize the user info
-passport.serializeUser(user.serializeUser());
-passport.deserializeUser(user.deserializeUser());
-
-// initialize passport
-app.use(passport.initialize)
-app.use(passport.session)
-
-
-
-// initalize flash
-app.use(flash());
-
 // Set-up Express Session
 app.use(session({
   secret:"SomeSecret", 
   saveUninitialized:false,
   resave:false
 }))
+
+// implement a User Authentication
+passport.use(User.createStrategy());
+
+// serialize and deserialize the user info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+// initalize flash
+app.use(flash());
+
+
 
 
 let indexRouter = require('../routes/index');
