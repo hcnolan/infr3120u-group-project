@@ -3,11 +3,15 @@ INFR 3120U Group Project
 
 
 # To Do
-- Create routes (Video Authentication 1 complete)
+- create login/logout button on navbar
 
 - customize views to fit our needs
 
 - add warning before deletion of document
+
+# Part 2 Done
+- Basic Authentication (Auth video 1 and 2)
+
 
 # Part 1 Done
 
