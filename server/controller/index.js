@@ -36,7 +36,7 @@ module.exports.processLoginPage = (req, res, next) => {
         if(!user)
         {
             req.flash('loginMessage', 
-            'AuthenticatorError');
+            'AuthenticationError');
             return res.redirect('/login');
         }
         req.login(user, (err) => {
@@ -56,7 +56,7 @@ module.exports.displayRegisterPage = (req, res, next)=>{
         res.render('auth/register',
             {
                 title: 'Register',
-                message: req.flash('RegisterMessage'), 
+                message: req.flash('registerMessage'), 
                 displayName: req.user ? req.user.displayName: ''
             })
     }
@@ -76,7 +76,7 @@ module.exports.processRegisterPage = (req, res, next) => {
     User.register(newUser, req.body.password, (err) => {
         if (err)
         {
-            console.log("Error: Inserting the new user")
+            console.log("Error: Inserting the new user");
             if (err.name=="UserExistsError")
                 {
                     req.flash('registerMessage', 

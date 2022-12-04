@@ -12,12 +12,10 @@ let User = mongoose.Schema({
 
     /*
     password:
-    {
         type:String,
         default:"",
         trim:true,
         required:'Password is required'
-    }
     */
     displayName:
     {

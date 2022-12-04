@@ -1,6 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
+const reservations = require('../models/reservations');
 
 // Connect to model
 let reservationModel = require('../models/reservations')
@@ -8,7 +9,7 @@ let reservationModel = require('../models/reservations')
 // Read operation
 // get route for the reservation list
 module.exports.displayreservationList = (req,res,next)=>{
-    reservationModel.find((err,reservationList)=>{
+    reservations.find((err,reservationList)=>{
         if(err){
             return console.error(err);
         } else {
@@ -24,7 +25,7 @@ module.exports.displayAddPage = (req, res, next)=> {
 }
 // Post route for processing the add page
 module.exports.processAddPage = (req, res, next)=> {
-    let newReservations = reservation ({
+    let newReservations = reservations ({
         "firstName":req.body.firstName,
         "lastName":req.body.lastName,
         "date":req.body.date,

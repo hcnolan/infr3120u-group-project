@@ -11,10 +11,6 @@ let flash = require('connect-flash');
 let app = express();
 
 
-// create a user model instance
-let userModel = require('../models/user');
-let User = userModel.User;
-
 
 // MongoDB Configuration
 let mongoose = require('mongoose');
@@ -35,22 +31,23 @@ app.use(session({
   resave:false
 }))
 
+// initalize flash
+app.use(flash());
+
+// initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// create a user model instance
+let userModel = require('../models/user');
+let User = userModel.User;
+
 // implement a User Authentication
 passport.use(User.createStrategy());
 
 // serialize and deserialize the user info
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-
-// initialize passport
-app.use(passport.initialize());
-app.use(passport.session());
-
-
-
-// initalize flash
-app.use(flash());
-
 
 
 
