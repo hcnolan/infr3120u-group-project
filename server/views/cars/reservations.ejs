@@ -8,8 +8,12 @@
             <div class="col-md-offset-10">
                 <!-- Page title and add button -->
                 <h1 class="display-5 fw-bold">Reservations </h1>
+                <% if(typeof displayName == 'string' && displayName) { %>
                     <a href="/reservations/add" class="btn btn-dark" role="button">
                         <i class="fas fa-plus-circle"></i> New Reservation
+                <% } else { %>
+                    <a href="/login">Login to book a reservation.</a>
+                <% } %>
                     </a>
                     <br>
                     <br>
@@ -35,14 +39,18 @@
                             <td class="text-center col-2"><%= reservationList[count].carMake %></td>
                             <td class="text-center col-2"><%= reservationList[count].carModel %></td> 
                             <td class="text-center col-1">
+                            <% if(typeof displayName == 'string' && displayName) { %>
                                 <a href="/reservations/update/<%= reservationList[count]._id %>"
                                     class="btn btn-dark"
                                     <i class="fas fa-pencil-alt"></i>Edit Reservation</a>
+                            <% } %>
                             </td>
                             <td class="text-center col-1">
+                            <% if(typeof displayName == 'string' && displayName) { %>
                                 <a href="/reservations/delete/<%= reservationList[count]._id %>"
                                     class="btn btn-danger"
-                                    <i class="fas fa-trash-alt"></i>Delete Reservation</a> 
+                                    <i class="fas fa-trash-alt"></i>Delete Reservation</a>
+                            <% } %>
                             </td>
                         </tr>
                     <% } %>

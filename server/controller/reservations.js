@@ -13,7 +13,11 @@ module.exports.displayreservationList = (req,res,next)=>{
         if(err){
             return console.error(err);
         } else {
-            res.render('cars/reservations', { title: 'Reservations', reservationList: reservationList });
+            res.render('cars/reservations', { 
+                title: 'Reservations', 
+                reservationList: reservationList,
+                displayName: req.user ? req.user.displayName:''
+             });
         }
     });
 }

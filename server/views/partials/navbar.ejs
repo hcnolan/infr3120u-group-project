@@ -8,9 +8,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <% if(typeof displayName == 'string' && displayName) { %>
+                            <li class="navbar-text">Welcome <%= displayName %></li>
+                            <li class="navbar-item"><a href="/logout">Logout</a></li>
+                        <% } else { %>
+                            <li class="nav-item"><a class="nav-link me-lg-3" href="/login">Login</a></li>
+                            <li class="nav-item"><a class="nav-link me-lg-3" href="/register">Register</a></li>
+                        <% } %>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="/#downloads">Our Cars</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3 btn btn-warning rounded-pill px-3 mb-2 mb-lg-0" href="/reservations">Book a ride today!<i class="ms-1 fa-solid fa-car"></i></a></li>
 
+                        
                         </span>
                     </button>
                     </ul>

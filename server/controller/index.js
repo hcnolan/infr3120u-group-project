@@ -5,7 +5,10 @@ let userModel = require('../models/user');
 let User = userModel.User;
 
 module.exports.displayHomePage=(req, res, next)=>{
-    res.render('index', { title: 'Home' });
+    res.render('index', { 
+        title: 'Home',
+        displayName: req.user ? req.user.displayName:''
+    });
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
