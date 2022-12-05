@@ -69,6 +69,7 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 app.use('/', indexRouter);
 app.use('/home', indexRouter);
+app.use('/logout', indexRouter);
 app.use('/users', usersRouter);
 app.use('/reservations', reservationRouter);
 
