@@ -3,7 +3,7 @@ INFR 3120U Group Project
 
 
 # To Do
-- create login/logout button on navbar
+
 
 - customize views to fit our needs
 
@@ -11,7 +11,7 @@ INFR 3120U Group Project
 
 # Part 2 Done
 - Basic Authentication (Auth video 1 and 2)
-
+- create login/logout button on navbar
 
 # Part 1 Done
 
