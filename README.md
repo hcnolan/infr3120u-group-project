@@ -1,30 +1,60 @@
-# infr3120u-group-project
-INFR 3120U Group Project
+#INFR 3120U Group Project Group 20#
+
+Link to website:
+
+Hello, thanks for taking a look at our website.
+
+All files for my webiste are located in the WEBSCRIPTA32022
+it consists of the following folders:
+
+> Node_modules
+
+    -(Contains all the dependencies)
+    
+> public
+
+    -images (contains images)
+    
+    -javascript (contains javascript)
+    
+    -stylesheets (contains css file)
+    
+> server
+
+    -config (contains app.js & db.js)
+    
+    -controller (contains reservations.js and index.js)
+    
+    -models (contains reservations.js & users.js) 
+    
+    -routes (contains 3 routes: index, reservations & users)
+    
+> views
+
+    -auth (contains authentication views login & register in .ejs format)
+    
+    -cars (contains the view for displaying add, edit & list in .ejs format)
+    
+    -partials (contains the shared header, footer, banner & navbar)
+    
+    -car.ejs (view for displaying cars)
+    
+    -error.ejs (view for displaying errors)
+    
+    -index.ejs (view for displaying homepage)
 
 
-# To Do
+For this assignment, we downloaded a bootstrap theme and editied it to meet the assignment criteria
+- This is the link to the used theme: https://startbootstrap.com/theme/new-age
+we used the HTML and CSS files from this theme for our website.
+
+All images under /cars is by Rex Pallath taken inside Forza Horizon 5
+- The car description under /cars is from wikipedia
+
+All images on the homepage are from unsplash.com and specifcially attributed in the code.
 
 
-- customize views to fit our needs
+#### Thanks again and we wish you a great day! ####
+---------------------------------------------------
 
-- add warning before deletion of document
-
-# Part 2 Done
-- Basic Authentication (Auth video 1 and 2)
-- create login/logout button on navbar
-
-# Part 1 Done
-
-- Decide what the site will be (site will be a car rental)
-- Create design document (done, using prexisting bootstrap theme [https://startbootstrap.com/theme/new-age] ~ asked prof, said it is fine - Rex)
-- Create landing page (done - Rex)
-
->Provide the ability to (CRUD)
-- create new objects
-- view list of existing objects
-- edit existing objects
-- delete existing objects
-
-- External Design Document
-
-- Demo Video????
+- Hayden Nolan, Hewad Tahiri, Sarah Fayyaz, Rishawn Maragah & Rex Pallath
