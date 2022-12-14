@@ -6,6 +6,9 @@ let indexController = require('../controller/index');
 router.get('/', indexController.displayHomePage);
 router.get('/home', indexController.displayHomePage);
 
+/*GET Car page */
+router.get('/cars', indexController.displayCarPage);
+
 /* Get Authentication Pages */
 // Get router for login page
 router.get('/login', indexController.displayLoginPage);

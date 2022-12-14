@@ -11,6 +11,13 @@ module.exports.displayHomePage=(req, res, next)=>{
     });
 }
 
+module.exports.displayCarPage=(req, res, next)=>{
+    res.render('cars', { 
+        title: 'Cars',
+        displayName: req.user ? req.user.displayName:''
+    });
+}
+
 module.exports.displayLoginPage = (req, res, next) => {
     if (!req.user)
     {

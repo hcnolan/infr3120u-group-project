@@ -17,7 +17,7 @@ module.exports.displayreservationList = (req,res,next)=>{
                 title: 'Reservations', 
                 reservationList: reservationList,
                 displayName: req.user ? req.user.displayName:''
-             });
+            });
         }
     });
 }
